@@ -1,3 +1,5 @@
+//contain imports and functionality that is available to the entire app.
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -20,9 +22,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
-      { path: 'cart', component: CartComponent },
-       { path: 'shipping', component: ShippingComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },// route for product details
+      { path: 'cart', component: CartComponent },//route for cart 
+       { path: 'shipping', component: ShippingComponent },//route for shipping 
     ])
   ],
   declarations: [

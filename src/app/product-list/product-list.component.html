@@ -2,21 +2,21 @@
 
 
 
-<div *ngFor="let product of products; index as productId">
+<div *ngFor="let product of products; index as productId"><!-- *ngFor, the <div> repeats product in the list.-->
     <h3>
       <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
-      {{ product.name }}
+      {{ product.name }}<!-- RouterLink  gives the router control over the anchor element-->
     </a>
   </h3>
      <p *ngIf="product.description">
-    Description: {{ product.description }}
+    Description: {{ product.description }}<!--  render the property value as text interpolation syntax {{ }}-->
   </p>
-   <button (click)="share()">
+   <button (click)="share()"><!--  click event to the share() method-->
     Share
   </button>
   <app-product-alerts
   [product]="product"
-    (notify)="onNotify()">
+    (notify)="onNotify()"><!--update product list component to receive output from product alerts component-->
 </app-product-alerts>
 </div>
 <!-- 
